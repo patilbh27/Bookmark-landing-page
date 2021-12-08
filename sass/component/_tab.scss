@@ -1,0 +1,33 @@
+.tab {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(auto, 1fr));
+  grid-gap: 10rem;
+  @include respond(tablet) {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-gap: 5rem;
+  }
+
+  .tab-text {
+    h2 {
+      text-align: center;
+      @include respond(tablet) {
+        text-align: left;
+      }
+    }
+    @include respond(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 5rem;
+    }
+  }
+}
+
+.image-container {
+  @include image-container;
+
+  .tab-image {
+    width: 100%;
+  }
+}

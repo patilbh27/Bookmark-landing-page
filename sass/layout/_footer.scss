@@ -1,0 +1,64 @@
+.footer {
+  background-color: var(--very-dark-blue);
+  padding: 5rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  @include respond(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 17rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 2rem 0 1rem;
+    @include respond(tablet) {
+      display: flex;
+      padding: 0;
+      padding-left: 3rem;
+    }
+  }
+  &__item {
+    padding: 1.5rem 0;
+    @include respond(tablet) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: var(--soft-red);
+    }
+  }
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  .social-link {
+    padding: 0 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

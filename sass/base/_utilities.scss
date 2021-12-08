@@ -1,0 +1,27 @@
+.padding-centering {
+  padding: 0 4rem;
+
+  @include respond(tablet) {
+    padding: 0 17rem;
+  }
+}
+
+.rotating {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.answer.animate_fadeIn {
+  animation-duration: 5s;
+}

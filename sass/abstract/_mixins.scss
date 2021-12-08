@@ -1,0 +1,19 @@
+@mixin gray-border {
+  border-top: 0.5px solid rgba(144, 147, 161, 0.3);
+  border-bottom: 0.5px solid rgba(144, 147, 161, 0.3);
+}
+
+@mixin image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+// MIXIN FOR MEDIA QUERIES
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 750px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.options {
+  @include gray-border;
+  margin: 2.8rem 0 7rem;
+  list-style: none;
+  text-align: center;
+  max-width: 75rem;
+
+  @include respond(tablet) {
+    display: flex;
+    border-top: none;
+    justify-content: center;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .option {
+    padding: 2rem 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 1.6rem;
+    position: relative;
+
+    @include respond(tablet) {
+      padding: 2rem 5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--soft-red);
+    }
+
+    &::after {
+      content: '';
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 3px;
+      background-color: var(--soft-red);
+    }
+  }
+
+  .option:nth-of-type(2) {
+    @include gray-border;
+    @include respond(tablet) {
+      border: none;
+    }
+  }
+}
+
+.active .option::after {
+  display: inline-block;
+}

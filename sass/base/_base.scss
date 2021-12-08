@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.blue-bg {
+  position: absolute;
+  background-color: var(--soft-blue);
+  min-width: 30rem;
+  min-height: 21rem;
+  bottom: 0;
+  z-index: -1;
+
+  @include respond(tablet) {
+    min-width: 60rem;
+    min-height: 35rem;
+  }
+
+  &--right {
+    right: 0;
+    border-bottom-left-radius: 10rem;
+    @include respond(tablet) {
+      border-bottom-left-radius: 15rem;
+    }
+  }
+
+  &--left {
+    left: -40px;
+    bottom: -40px;
+    border-bottom-right-radius: 10rem;
+    @include respond(tablet) {
+      border-bottom-right-radius: 15rem;
+      left: -170px;
+      bottom: -100px;
+    }
+  }
+}
+
+.error {
+  position: absolute;
+  width: 20px;
+  height: 20px !important;
+  top: 20%;
+  right: 5%;
+  display: none;
+  z-index: -1;
+}

@@ -1,0 +1,87 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  @include respond(tablet) {
+    text-align: left;
+    font-size: 4.3rem;
+  }
+}
+
+.heading2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.paragraph {
+  color: var(--grayish-blue);
+  font-size: 1.45rem;
+  margin: 3rem 0;
+  line-height: 1.5;
+  text-align: center;
+  @include respond(tablet) {
+    text-align: left;
+  }
+}
+
+.header-text > .paragraph {
+  @include respond(tablet) {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+}
+.section-paragraph {
+  margin: 1.6rem 0;
+  line-height: 1.8;
+  @include respond(tablet) {
+    font-size: 1.8rem;
+  }
+}
+
+.version-paragraph {
+  color: var(--grayish-blue);
+  font-size: 1.5rem;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  pointer-events: none;
+  @include respond(tablet) {
+    font-size: 1.9rem;
+  }
+}
+
+.answer-paragraph {
+  color: var(--grayish-blue);
+  font-size: 1.5rem;
+  line-height: 1.7;
+  @include respond(tablet) {
+    font-size: 1.7rem;
+  }
+}
+
+p.joined {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+}
